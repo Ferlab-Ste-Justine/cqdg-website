@@ -111,15 +111,15 @@
 
     .content__copy {
       grid-row: 1;
-      grid-column: 1/span 4;
+      // grid-column: 1/span 4;
       z-index: 1;
     }
 
     .content__figure {
-      grid-row: 1;
+      // grid-row: 1;
       grid-column: 5/-1;
       justify-self: end;
-      transform: translateY(50%);
+      // transform: translateY(50%);
       width: 980px;
     }
   }
@@ -136,12 +136,13 @@
     }
 
     .content__figure {
+      grid-row: 1;
       grid-column: 1/-1;
       transform: none;
       width: unset;
       position: relative;
-      top: 160px;
-      right: -200px;
+      top: 4em;
+      right: -300px;
     }
   }
 }
