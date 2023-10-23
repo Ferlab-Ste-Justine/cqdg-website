@@ -112,6 +112,7 @@
     .content__copy {
       grid-row: 1;
       grid-column: 1/span 4;
+      z-index: 1;
     }
 
     .content__figure {
