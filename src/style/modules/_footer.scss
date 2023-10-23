@@ -60,33 +60,24 @@
   background: $color-neutral-0;
 
   &__content {
-    @include breakpoint(tablet) {
-      flex-direction: column;
-      align-items: center;
-    }
-
     display: flex;
+    flex-direction: column;
+    align-items: center;
     color: $color-text--secondary;
     font-size: 1.4rem;
     line-height: 1.428571429;
   }
 
-  &__copy {
-    @include breakpoint(tablet) {
-      text-align: center;
-      margin: 0 0 24px 0;
-    }
-
-    @include breakpoint(mintablet) {
-      margin: 0 24px 0 0;
-
-      align-self: flex-end;
-    }
-  }
-
   &__logos {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+    padding-top: 2em;
+    gap: 2em;
+    width: 100%;
+    border-top: 1px solid $color-neutral-2;
+
 
     a {
       border: none;
@@ -97,10 +88,6 @@
       &:hover {
         background: none;
       }
-    }
-
-    a+a {
-      margin-left: 24px;
     }
   }
 }
