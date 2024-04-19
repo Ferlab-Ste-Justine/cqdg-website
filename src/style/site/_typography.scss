@@ -119,7 +119,7 @@ li>ol {
 }
 
 // Links -----------
-a {
+a:not(.button) {
   text-decoration: none;
   color: inherit;
   border-bottom: 1px dotted;
@@ -133,7 +133,7 @@ a {
   }
 }
 
-.section--gradient a {
+.section--gradient a:not(.button) {
 
   &:active,
   &:focus,
@@ -142,4 +142,34 @@ a {
     border-bottom-style: solid;
 
   }
+}
+
+.button {
+  text-decoration: none;
+  display: inline-flex;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 2px;
+  line-height: 1.5;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  &--primary {
+    background: $color-brand-yellow-4;
+    color: $color-text;
+
+    &:active,
+    &:hover {
+      background: $color-brand-yellow-5;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0px 0px 0px 1px $color-text inset,
+        0px 0px 0px 1px $color-text, 0px 0px 0px 3px $color-brand-yellow-4 inset, 0px 0px 0px 2px $color-brand-yellow-4;
+
+    }
+  }
+
 }
